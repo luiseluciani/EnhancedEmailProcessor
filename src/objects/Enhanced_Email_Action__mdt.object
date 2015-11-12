@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Enhanced Email Action functionality to be able to send emails to users that are specified in related fields.</description>
+    <fields>
+        <fullName>Allow_Self_Emails__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If false, the person executing the action will not receive the email, even if he is one of the calculated recipients.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If false, the person executing the action will not receive the email, even if he is one of the calculated recipients.</inlineHelpText>
+        <label>Allow Self Emails</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Enhanced_Email_Template__c</fullName>
+        <externalId>false</externalId>
+        <label>Enhanced Email Template</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>From_Email_Address__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Email Address to show on the From field</inlineHelpText>
+        <label>From Email Address</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recipient_List__c</fullName>
+        <description>Comma separated list of recipients. You can enter email addresses or use dot notation to specify a field/related field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Comma separated list of recipients. You can enter email addresses or use dot notation to specify a field/related field</inlineHelpText>
+        <label>Recipient List</label>
+        <required>true</required>
+        <type>TextArea</type>
+    </fields>
+    <label>Enhanced Email Action</label>
+    <pluralLabel>Enhanced Email Actions</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>
